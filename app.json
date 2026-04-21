@@ -1,15 +1,20 @@
 {
   "expo": {
-    "name": "my-app",
-    "slug": "my-app",
+    "name": "Walk to Earn",
+    "slug": "walk-to-earn",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "walktoearn",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Walk-to-Earn needs your location to track valid walking or jogging movement and calculate rewards.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Walk-to-Earn needs your location to track valid walking or jogging movement and calculate rewards.",
+        "NSMotionUsageDescription": "Walk-to-Earn uses motion data to detect steps and validate movement."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -19,7 +24,12 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACTIVITY_RECOGNITION"
+      ]
     },
     "web": {
       "output": "static",
@@ -38,7 +48,14 @@
             "backgroundColor": "#000000"
           }
         }
-      ]
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Walk-to-Earn needs your location to track valid walking or jogging movement and calculate rewards."
+        }
+      ],
+      "@rnmapbox/maps"
     ],
     "experiments": {
       "typedRoutes": true,

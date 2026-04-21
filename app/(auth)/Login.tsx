@@ -134,7 +134,7 @@ export default function Login() {
                         }}>
                             <Text style={{ fontSize: 18 }}>🔥</Text>
                             <Text style={{ fontSize: 13, fontWeight: '700', color: colors.g700, flex: 1 }}>
-                                Your 7-day streak is waiting — don't break it!
+                                Your 7-day streak is waiting. Do not break it!
                             </Text>
                         </View>
 
@@ -211,7 +211,7 @@ export default function Login() {
 
                         {/* Register link */}
                         <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 32, gap: 4 }}>
-                            <Text style={{ fontSize: 14, color: colors.n400, fontWeight: '500' }}>Don't have an account?</Text>
+                            <Text style={{ fontSize: 14, color: colors.n400, fontWeight: '500' }}>Need an account?</Text>
                             <TouchableOpacity onPress={() => router.push('/(auth)/Register')} activeOpacity={0.7}>
                                 <Text style={{ fontSize: 14, fontWeight: '800', color: colors.g600 }}>Sign Up</Text>
                             </TouchableOpacity>

@@ -15,7 +15,7 @@ function AnimatedButton({ children }: { children: React.ReactNode }) {
         );
         anim.start();
         return () => anim.stop();
-    }, []);
+    }, [scale]);
 
     return (
         <Animated.View style={Platform.OS !== 'web' ? { transform: [{ scale }] } : undefined}>
